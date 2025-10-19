@@ -1,0 +1,54 @@
+You are an expert data extractor for job advertisements.
+The page content contains exactly one job listing.
+
+Your task is to extract structured information from this job ad, following the schema defined below.
+Return the results in valid JSON matching the schema.
+
+Fields to Extract:
+
+Basic Information
+
+job_title: The official title of the job position.
+
+company_name: The name of the company posting the job.
+
+job_category: The general industry or function of the job (e.g., Data Science, Marketing).
+
+sub_category: A more specific specialization within the job category (e.g., NLP Engineer, Digital Marketing Specialist).
+
+industry: The sector or industry where the company operates.
+
+Location
+6. location: The specific city, province, or region where the job is based.
+7. country: The country of the job’s location.
+
+Posting Details
+8. posting_date: The date when the job was posted.
+9. deadline: The application deadline, if mentioned.
+
+Job Requirements
+11. qualifications: Required qualifications such as degree, major, or certifications.
+12. technical_skills: List of required technical skills (e.g., programming languages, software tools).
+13. soft_skills: List of required soft skills (e.g., communication, teamwork).
+14. languages_required: Languages required for the role (e.g., Vietnamese, English).
+15. experience_required: The number of years of experience required, expressed as a numeric value (e.g., 0, 2.5, 5).
+
+Job Conditions
+16. salary: Salary or compensation details (range, fixed, or negotiable).
+17. contract_type: Contract type (full-time, part-time, internship, freelance).
+18. working_hours: Work schedule (e.g., 9–5, shifts, flexible).
+19. benefits: Benefits offered (e.g., insurance, training, bonuses).
+
+Textual Information
+20. description: The full job description and responsibilities.
+21. requirements_text: The raw requirements section as written in the posting.
+
+Instructions:
+
+Extract only what is explicitly stated in the ad.
+
+If a field is not available, set it to null instead of guessing.
+
+Ensure lists (e.g., technical_skills, benefits) are structured as arrays.
+
+Ensure the JSON output strictly follows the schema structure.
